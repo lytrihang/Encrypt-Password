@@ -1,0 +1,9 @@
+<script language="JavaScript" type="text/javascript" src="https://account.garena.com/js/jsencrypt.min.js"></script>
+
+<script>
+    var public_key = "-----BEGIN PUBLIC KEY-----\MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDR7FHnzqB8syM62mAJAG7z6/ie\/Vz3eq0hEFHQCAd9xxQocrjDbulx1LNox5wTprvLibVRqDCMaPcXZMFRnerZC1YO\Ems2U3VwDMWi5s+B4qD+6jG1PB+NPzrlIt+asZtcDDkdmX1t5WgHMoubvV9tCOpH\YUBgF34S9lvbldXW4wIDAQAB\-----END PUBLIC KEY-----";
+    var encrypt = new JSEncrypt();
+    encrypt.setPublicKey(public_key);
+    var text = encrypt.encrypt(<?=$_GET["text"]?>);
+    //document.write(text);
+</script>
